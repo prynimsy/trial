@@ -96,15 +96,6 @@ export const Header = (): JSX.Element => {
             </motion.div>
           </Link>
         </div>
-
-        {/* Right side actions */}
-        <div className="flex items-center space-x-4 w-auto lg:w-auto">
-          <button 
-            onClick={() => setIsSearchOpen(true)}
-            className="p-2 hover:bg-[#ffdff9]/50 rounded-full transition-colors"
-          >
-            <SearchIcon className="w-5 h-5 text-[#2e3155]" />
-          </button>
           
           <button className="p-2 hover:bg-[#ffdff9]/50 rounded-full transition-colors relative">
             <Heart className="w-5 h-5 text-[#2e3155]" />
