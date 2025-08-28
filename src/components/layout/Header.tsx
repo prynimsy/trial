@@ -97,6 +97,14 @@ export const Header = (): JSX.Element => {
           </Link>
         </div>
         <div className="flex items-center space-x-2 w-12 lg:w-auto justify-end">
+          {/* Search button - hidden on mobile, visible on desktop */}
+          <button
+            onClick={() => setIsSearchOpen(true)}
+            className="hidden md:flex p-2 hover:bg-[#ffdff9]/50 rounded-full transition-colors"
+          >
+            <SearchIcon className="w-5 h-5 text-[#2e3155]" />
+          </button>
+
           <Link to="/wishlist">
             <button className="p-2 hover:bg-[#ffdff9]/50 rounded-full transition-colors relative">
               <Heart className="w-5 h-5 text-[#2e3155]" />
@@ -166,6 +174,18 @@ export const Header = (): JSX.Element => {
             className="lg:hidden bg-[#fdf9f9] border-b border-[#2e3155]/10 shadow-lg"
           >
             <nav className="flex flex-col p-4 space-y-4">
+              {/* Mobile Search */}
+              <button
+                onClick={() => {
+                  setIsSearchOpen(true);
+                  setIsMenuOpen(false);
+                }}
+                className="flex items-center space-x-3 font-['Kameron'] font-normal text-lg py-2 px-4 rounded-lg text-[#2e3155]/70 hover:text-[#2e3155] hover:bg-[#ffdff9]/30 transition-all duration-300"
+              >
+                <SearchIcon className="w-5 h-5" />
+                <span>Search</span>
+              </button>
+
               {navLinks.map((link, index) => (
                 <Link
                   key={index}
