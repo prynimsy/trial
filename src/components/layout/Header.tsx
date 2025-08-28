@@ -96,16 +96,7 @@ export const Header = (): JSX.Element => {
             </motion.div>
           </Link>
         </div>
-          
-          <button className="p-2 hover:bg-[#ffdff9]/50 rounded-full transition-colors relative">
-            <Heart className="w-5 h-5 text-[#2e3155]" />
-            {getWishlistCount() > 0 && (
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#ff6b6b] text-white text-xs rounded-full flex items-center justify-center">
-                {getWishlistCount()}
-              </span>
-            )}
-          </button>
-
+        <div className="flex items-center space-x-2 w-12 lg:w-auto justify-end">
           <Link to="/wishlist">
             <button className="p-2 hover:bg-[#ffdff9]/50 rounded-full transition-colors relative">
               <Heart className="w-5 h-5 text-[#2e3155]" />
@@ -127,6 +118,7 @@ export const Header = (): JSX.Element => {
               )}
             </button>
           </Link>
+          
           <Button
             variant="outline"
             className="hidden md:flex h-[40px] px-6 rounded-full border-2 border-[#2e3155] hover:bg-[#2e3155] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
